@@ -160,45 +160,49 @@ Reported COVID-19 tests administered, nationally
 
 
 ## `data_daily/`
-These tables are subsets of the corresponding `data_hourly/` tables. Rather than including records for all archived pages for a given day, these tables retain only the records associated with the *latest* `page_downloaded` timestamp for a given day (defined as 0:00 to 23:59 Eastern Time).
+These tables are subsets of the corresponding `data_hourly/` tables. Rather than including records for all archived pages for a given day, these tables retain only the records associated with the *latest* `page_downloaded` timestamp for a given day (corresponding to 0:00 to 23:59 Eastern Time).
 
 ### `./facility_cases_daily.csv`
 
-|Variable                 |Type     |Description                               |
-|:------------------------|:--------|:-----------------------------------------|
-|facility_id              |`string` |A unique identifier that Vera manually assigned to each listed facility|
-|ice_day_updated          |`date`   |The `ice_date_updated` field, floored to the day|
-|facility_cases_cumulative|`numeric`|The latest value assumed by the `facility_cases_cumulative` field in "_hourly" for this facility-day|
-|facility_cases_current   |`numeric`|Where available, the latest value assumed by the `facility_cases_current` field in "_hourly" for this facility-day|
-|facility_deaths          |`numeric`|Where available, the latest value assumed by the `facility_deaths` field in "_hourly" for this facility-day|
-|facility_name            |`string` |The facility name standardized by Vera associated with each `facility_id`|
-|facility_listed          |`string` |The latest value assumed by the `facility_listed` field in "_hourly" for a given `facility_id` on this day|
-|page_id                  |`string` |The `page_id` for this record|
+|Variable                 |Type      |Description                               |
+|:------------------------|:---------|:-----------------------------------------|
+|facility_id              |`string`  |A unique identifier that Vera manually assigned to each listed facility|
+|page_downloaded_day      |`date`    |The `page_downloaded` field, floored to the day |
+|facility_cases_cumulative|`numeric` |The latest value assumed by the `facility_cases_cumulative` field in "_hourly" for this facility-day|
+|facility_cases_current   |`numeric` |Where available, the latest value assumed by the `facility_cases_current` field in "_hourly" for this facility-day|
+|facility_deaths          |`numeric` |Where available, the latest value assumed by the `facility_deaths` field in "_hourly" for this facility-day|
+|facility_name            |`string`  |The facility name standardized by Vera associated with each `facility_id`|
+|facility_listed          |`string`  |The latest value assumed by the `facility_listed` field in "_hourly" for a given `facility_id` on this day|
+|ice_date_updated         |`datetime`|The `ice_date_updated` field, floored to the day|
+|page_id                  |`string`  |The `page_id` for this record|
 
 ## `./national_cases_daily.csv`
 
-|Variable        |Type     |Description                                        |
-|:---------------|:--------|:--------------------------------------------------|
-|ice_day_updated |`date`   |The `ice_date_updated` field, floored to the day    |
-|cases_cumulative|`numeric`|The latest value assumed by the `cases_cumulative` field in "_hourly" for this day|
-|cases_current   |`numeric`|Where available, the latest value assumed by the max(`cases_current_total_row`, `cases_current_header`) field in "_hourly" for this day|
-|page_id         |`string` |The `page_id` for this record                      |
+|Variable            |Type      |Description                                        |
+|:-------------------|:---------|:--------------------------------------------------|
+|page_downloaded_day |`date`    |The `page_downloaded` field, floored to the day |
+|cases_cumulative    |`numeric` |The latest value assumed by the `cases_cumulative` field in "_hourly" for this day|
+|cases_current       |`numeric` |The latest value assumed by the max(`cases_current_total_row`, `cases_current_header`) field in "_hourly" for this day|
+|ice_date_updated    |`datetime`|The latest value assumed by the `ice_date_updated` field for a given `page_download_day`|
+|page_id             |`string`  |The `page_id` for this record                      |
 
 ### `./national_population_daily.csv`
 
-|Variable          |Type     |Description                                       |
-|:-----------------|:--------|:-------------------------------------------------|
-|ice_day_as_of_pop |`date`   |The `ice_date_as_of_test` field, floored to the day |
-|population_current|`numeric`|Where available, the latest value assumed by the `tests` field in "_hourly" for this day|
-|page_id           |`string` |The `page_id` for this record                     |
+|Variable            |Type     |Description                                       |
+|:-------------------|:--------|:-------------------------------------------------|
+|page_downloaded_day |`date`   |The `page_downloaded` field, floored to the day |
+|population_current  |`numeric`|Where available, the latest value assumed by the `tests` field in "_hourly" for this day|
+|ice_date_as_of_pop  |`date`   |The latest value assumed by the `ice_date_as_of_pop` field for a given `page_download_day`|
+|page_id             |`string` |The `page_id` for this record                     |
 
 ### `./national_tests_daily.csv`
 
-|Variable          |Type     |Description                                      |
-|:-----------------|:--------|:------------------------------------------------|
-|ice_day_as_of_test|`date`   |The `ice_date_as_of_test` field, floored to the day|
-|tests_cumulative  |`numeric`|Where available, the latest value assumed by the `tests` field in "_hourly" for this day|
-|page_id           |`string` |The `page_id` for this record                    |
+|Variable           |Type      |Description                                      |
+|:------------------|:---------|:------------------------------------------------|
+|page_downloaded_day|`date`    |The `page_downloaded` field, floored to the day |
+|tests_cumulative   |`numeric` |Where available, the latest value assumed by the `tests_cumulative` field in the "_hourly" table for this day|
+|ice_date_as_of_test|`datetime`|The latest value assumed by the `ice_date_as_of_test` field for a given `page_download_day`|
+|page_id            |`string`  |The `page_id` for this record                    |
 
 ## `metadata/`
 
