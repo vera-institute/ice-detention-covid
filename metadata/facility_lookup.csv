@@ -58,7 +58,7 @@ Freeborn County Adult Detention Center,FREEBMN,FREEBORN COUNTY ADULT DETENTION C
 Geauga County Jail,GEAUGOH,GEAUGA COUNTY JAIL,41.504557,-81.19155,OH,mp
 Glades County Detention Center,GLADEFL,GLADES COUNTY DETENTION CENTER,26.838714000000003,-81.124018,FL,mp
 "Glades County Detention Center (Moore Haven, FL)",GLADEFL,GLADES COUNTY DETENTION CENTER,26.838714000000003,-81.124018,FL,mp
-Golden State Annex Facility,Golden State Annex Facility,GOLDEN STATE ANNEX FACILITY,34.080828,-80.9770025,CA,none
+Golden State Annex Facility,Golden State Annex Facility,GOLDEN STATE ANNEX FACILITY,35.6675911,-119.227114,CA,none
 Henderson Detention Center,HENDENV,HENDERSON DETENTION CENTER,36.0332158,-114.9746293,NV,mp
 Houston Contract Detention Facility,HOUICDF,HOUSTON CONTRACT DETENTION FACILITY,29.95083585,-95.31218808,TX,mp
 "Houston Contract Detention Facility (Houston, TX)",HOUICDF,HOUSTON CONTRACT DETENTION FACILITY,29.95083585,-95.31218808,TX,mp
@@ -83,20 +83,21 @@ Kay County Detention Center,https://ice.gov/detention-facility/kay-county-detent
 Krome North Service Processing Center,KRO,KROME NORTH SERVICE PROCESSING CENTER,25.7625818,-80.193024,FL,mp
 La Palma Correctional Facility,https://ice.gov/detention-facility/la-palma-correctional-center,LA PALMA CORRECTIONAL CENTER,32.8242111,-111.5441895,AZ,web
 "La Palma Correctional Facility (Eloy, AZ)",https://ice.gov/detention-facility/la-palma-correctional-center,LA PALMA CORRECTIONAL CENTER,32.8242111,-111.5441895,AZ,web
-LA Staging,LA Staging,LA STAGING,34.080828,-80.9770025,CA,none
+LA Staging,LA Staging,LA STAGING,34.0537633,-118.2419223,CA,none
 Laredo Processing Center,LRDICDF,LAREDO PROCESSING CENTER,27.529476399999997,-99.44777311,TX,mp
-Larkin Behavioral Health Center,Larkin Behavioral Health Center,LARKIN BEHAVIORAL HEALTH CENTER,34.080828,-80.9770025,FL,none
-"LaSalle Correctional Center (Olla, LA)",LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.28482360000002,LA,excel
+Larkin Behavioral Health Center,Larkin Behavioral Health Center,LARKIN BEHAVIORAL HEALTH CENTER,26.0211773,-80.1806619,FL,none
+"LaSalle Correctional Center (Olla, LA)",LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.2848236,LA,excel
+LaSalle County Regional Detention Center,https://ice.gov/detention-facility/lasalle-county-regional-detention-center,NA,28.05259082333984,-99.33837890625,TX,web
 LaSalle ICE Processing Center - Jena,JENADLA,JENA/LASALLE DETENTION FACILITY,31.70727408,-92.15105963,LA,mp
-LaSalle ICE Processing Center - Olla,LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.28482360000002,LA,excel
+LaSalle ICE Processing Center - Olla,LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.2848236,LA,excel
 "LaSalle Processing Center - Jena (Jena, LA)",JENADLA,JENA/LASALLE DETENTION FACILITY,31.70727408,-92.15105963,LA,mp
-"LaSalle Processing Center - Olla (Olla, LA)",LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.28482360000002,LA,excel
+"LaSalle Processing Center - Olla (Olla, LA)",LASALLE CORR CTR OLLA,LASALLE CORR CTR OLLA,31.8513106,-92.2848236,LA,excel
 "LaSalle Processing Center (Jena, LA)",JENADLA,JENA/LASALLE DETENTION FACILITY,31.70727408,-92.15105963,LA,mp
 Limestone County Detention Center,LIMESTX,LIMESTONE COUNTY DETENTION CENTER,31.52878353,-96.51234696,TX,mp
 Lincoln County Detention Center,LINCOMO,LINCOLN COUNTY DETENTION CENTER,38.97101443,-90.96348024,MO,mp
 "Lincoln County Detention Center (Troy, MO)",LINCOMO,LINCOLN COUNTY DETENTION CENTER,38.97101443,-90.96348024,MO,mp
 Linn County Jail,LINNJIA,LINN COUNTY JAIL,41.97529487,-91.67008471,IA,mp
-"local hospital (Miami, FL)","local hospital (Miami, FL)","LOCAL HOSPITAL (MIAMI, FL)",34.080828,-80.9770025,FL,none
+"local hospital (Miami, FL)","local hospital (Miami, FL)","LOCAL HOSPITAL (MIAMI, FL)",25.7823404,-80.3695441,FL,none
 McHenry County Adult Correctional Facility,MCHENIL,MCHENRY COUNTY CORRECTIONAL FACILITY,42.3370015,-88.4431677,IL,mp
 Mesa Verde ICE Processing Center,https://ice.gov/detention-facility/mesa-verde-ice-processing-facility,MESA VERDE ICE PROCESSING FACILITY,35.38904997,-119.0148926,CA,web
 "Montgomery Processing (Houston, TX)",https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
