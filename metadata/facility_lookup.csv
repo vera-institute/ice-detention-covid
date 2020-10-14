@@ -22,6 +22,7 @@ Buffalo (Batavia) Service Processing Center,BTV,BUFFALO (BATAVIA) SERVICE PROCES
 Cache County Jail,CACHEUT,CACHE COUNTY JAIL,41.73515501,-111.83616799999999,UT,mp
 "Calhoun County Correction Center (Battle Creek, MI)",CALHOMI,CALHOUN COUNTY CORRECTIONAL CENTER,42.3166739,-85.1758915,MI,mp
 Calhoun County Correctional Center,CALHOMI,CALHOUN COUNTY CORRECTIONAL CENTER,42.3166739,-85.1758915,MI,mp
+Cambria County Prison,CAMBRPA,CAMBRIA COUNTY JAIL,40.484396600000004,-78.70123165,PA,mp
 Caroline Detention Facility,https://ice.gov/detention-facility/caroline-detention-facility,CAROLINE DETENTION FACILITY,38.11727166,-77.27783203,VA,web
 "Caroline Detention Facility (Bowling Green, VA)",https://ice.gov/detention-facility/caroline-detention-facility,CAROLINE DETENTION FACILITY,38.11727166,-77.27783203,VA,web
 Catahoula Correctional Center,CATAHLA,CATAHOULA CORRECTIONAL CENTER,31.860451,-91.962215,LA,mp
@@ -100,6 +101,7 @@ Linn County Jail,LINNJIA,LINN COUNTY JAIL,41.97529487,-91.67008471,IA,mp
 "local hospital (Miami, FL)","local hospital (Miami, FL)","LOCAL HOSPITAL (MIAMI, FL)",25.7823404,-80.3695441,FL,none
 McHenry County Adult Correctional Facility,MCHENIL,MCHENRY COUNTY CORRECTIONAL FACILITY,42.3370015,-88.4431677,IL,mp
 Mesa Verde ICE Processing Center,https://ice.gov/detention-facility/mesa-verde-ice-processing-facility,MESA VERDE ICE PROCESSING FACILITY,35.38904997,-119.0148926,CA,web
+Montgomery County Jail,MONTGMO,MONTGOMERY COUNTY JAIL,38.979586,-91.504377,MO,mp
 "Montgomery Processing (Houston, TX)",https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
 "Montgomery Processing Center (Conroe, TX)",https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
 Montgomery Processing Center (Houston),https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
