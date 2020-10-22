@@ -131,6 +131,7 @@ Reported COVID-19 cases, nationally
 |cases_cumulative           |`numeric` |The *cumulative* number of confirmed COVID-19 cases ICE reported nationally.|
 |cases_current_header       |`numeric` |Where available, the number of *current* COVID-19 cases reported nationally in the page header|
 |cases_current_total_row    |`numeric` |Where available, the number of *current* COVID-19 cases reported nationally in the "TOTAL" row of the facility table|
+|deaths_cumulative          |`numeric` |Where available, the number of *cumulative* COVID-19 deaths reported nationally in the "TOTAL" row of the facility table|
 |ice_date_updated           |`datetime`|The italicized "Updated %mm/%dd/%yyyy" timestamp at the bottom-right of the case section|
 |ice_date_as_of_case        |`datetime`|Where available, the "AS OF %m/%d/%yyyy" timestamp at the top of the facility case table|
 |ice_date_as_of_case_current|`datetime`|Where available, the "AS OF %m/%d/%yyyy" timestamp found alongside the current case report in the page header|
@@ -183,6 +184,7 @@ These tables are subsets of the corresponding `data_hourly/` tables. Rather than
 |page_downloaded_day |`date`    |The `page_downloaded` field, floored to the day |
 |cases_cumulative    |`numeric` |The latest value assumed by the `cases_cumulative` field in "_hourly" for this day|
 |cases_current       |`numeric` |The latest value assumed by the max(`cases_current_total_row`, `cases_current_header`) field in "_hourly" for this day|
+|deaths_cumulative   |`numeric` |The latest value assumed by the `deaths_cumulative` field in "_hourly" for this day|
 |ice_date_updated    |`datetime`|The latest value assumed by the `ice_date_updated` field for a given `page_download_day`|
 |page_id             |`string`  |The `page_id` for this record                      |
 
