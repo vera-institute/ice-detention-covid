@@ -66,8 +66,8 @@ Houston Contract Detention Facility,HOUICDF,HOUSTON CONTRACT DETENTION FACILITY,
 "Houston Contract Detention Facility (Houston, TX)",HOUICDF,HOUSTON CONTRACT DETENTION FACILITY,29.95083585,-95.31218808,TX,mp
 Hudson County Jail,HUDSONJ,HUDSON COUNTY CORRECTIONAL CENTER,40.72991,-74.103398,NJ,mp
 "Hudson County Jail (Kearny, NJ)",HUDSONJ,HUDSON COUNTY CORRECTIONAL CENTER,40.72991,-74.103398,NJ,mp
-IAH Polk Adult Detention Facility,https://ice.gov/detention-facility/iah-polk-adult-detention-facility,IAH POLK ADULT DETENTION FACILITY,30.70405823,-95.02075195,TX,web
-"IAH Secure Adult Detention Facility (Livingston, TX)",https://ice.gov/detention-facility/iah-polk-adult-detention-facility,IAH POLK ADULT DETENTION FACILITY,30.70405823,-95.02075195,TX,web
+IAH Polk Adult Detention Facility,POLKCTX,POLK COUNTY ADULT DETENTION FACILITY,30.698151300000003,-95.00579154,TX,mp
+"IAH Secure Adult Detention Facility (Livingston, TX)",POLKCTX,POLK COUNTY ADULT DETENTION FACILITY,30.698151300000003,-95.00579154,TX,mp
 Immigration Centers of America - Farmville,FRMVLVA,IMMIGRATION CENTERS OF AMERICA FARMVILLE,37.319501,-78.438276,VA,mp
 Imperial Regional Detention Facility,IRADFCA,IMPERIAL REGIONAL DETENTION FACILITY,32.690811,-115.397861,CA,mp
 "Imperial Regional Detention Facility (Calexico, CA)",IRADFCA,IMPERIAL REGIONAL DETENTION FACILITY,32.690811,-115.397861,CA,mp
@@ -101,7 +101,8 @@ Lincoln County Detention Center,LINCOMO,LINCOLN COUNTY DETENTION CENTER,38.97101
 Linn County Jail,LINNJIA,LINN COUNTY JAIL,41.97529487,-91.67008471,IA,mp
 "local hospital (Miami, FL)","local hospital (Miami, FL)","LOCAL HOSPITAL (MIAMI, FL)",25.7823404,-80.3695441,FL,none
 McHenry County Adult Correctional Facility,MCHENIL,MCHENRY COUNTY CORRECTIONAL FACILITY,42.3370015,-88.4431677,IL,mp
-Mesa Verde ICE Processing Center,https://ice.gov/detention-facility/mesa-verde-ice-processing-facility,MESA VERDE ICE PROCESSING FACILITY,35.38904997,-119.0148926,CA,web
+Mesa Verde ICE Processing Center,CACFMES,NA,,,NA,web
+Monroe County Jail,MONROMI,NA,,,NA,web
 Montgomery County Jail,MONTGMO,MONTGOMERY COUNTY JAIL,38.979586,-91.504377,MO,mp
 "Montgomery Processing (Houston, TX)",https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
 "Montgomery Processing Center (Conroe, TX)",https://ice.gov/detention-facility/montgomery-processing-center,MONTGOMERY PROCESSING CENTER,30.34443559,-95.44921875,TX,web
