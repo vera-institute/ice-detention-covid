@@ -76,21 +76,21 @@ Vera uses the following sources to standardize facility strings:
 
 We include in this repository data on the four domains above in two versions:
 
-- "`_hourly`" These tables contain parsed data from all page archives available.
+- "`_hourly`" These tables contain parsed data from all page archives available, and are made available as [Apache Parquet](https://parquet.apache.org/) files due to file size limitations in GitHub.
 - "`_daily`": These tables are subsets of the corresponding `data_hourly/` tables. Rather than including records for all archived pages for a given day, these tables retain only the records associated with the latest page_downloaded timestamp for a given day (defined as 0:00 to 23:59 Eastern Time).
 
 The directory tree below outlines the organization,
-followed by data dictionaries for each .csv file.
+followed by data dictionaries for each data file.
 
 ```
-ice-covid-detention/
+ice-detention-covid/
     |-- README.md
     |-- License.md
     |-- data_hourly/
-    |   |-- facility_cases_hourly.csv
-    |   |-- national_cases_hourly.csv
-    |   |-- national_population_hourly.csv
-    |   `-- national_tests_hourly.csv
+    |   |-- facility_cases_hourly.parquet
+    |   |-- national_cases_hourly.parquet
+    |   |-- national_population_hourly.parquet
+    |   `-- national_tests_hourly.parquet
     |-- data_daily/
     |   |-- facility_cases_daily.csv
     |   |-- national_cases_daily.csv
@@ -102,8 +102,7 @@ ice-covid-detention/
 ```
 
 ## `data_hourly/`
-
-### `facility_cases_hourly.csv`
+### `facility_cases_hourly.parquet`
 Reported COVID-19 cases, by facility
 
 |Variable                   |Type      |Description                            |
@@ -120,7 +119,7 @@ Reported COVID-19 cases, by facility
 |ice_date_updated           |`datetime`|The italicized "Updated %mm/%dd/%yyyy" timestamp that appears below the page section corresponding to reports about people detained by ICE; for example, in the current version (V4), this timestamp is below the "COVID-19 ICE Detainee Statistics by Facility" table.|
 |ice_date_as_of_case        |`datetime`|Where available, the "AS OF %m/%d/%yyyy" timestamp at the top of the "COVID-19 ICE Detainee Statistics by Facility" table on the archived webpage.|
 
-### `./national_cases_hourly.csv`
+### `./national_cases_hourly.parquet`
 Reported COVID-19 cases, nationally
 
 |Variable                   |Type      |Description                            |
@@ -136,7 +135,7 @@ Reported COVID-19 cases, nationally
 |ice_date_as_of_case        |`datetime`|Where available, the "AS OF %m/%d/%yyyy" timestamp at the top of the facility case table|
 |ice_date_as_of_case_current|`datetime`|Where available, the "AS OF %m/%d/%yyyy" timestamp found alongside the current case report in the page header|
 
-### `./national_population_hourly.csv`
+### `./national_population_hourly.parquet`
 The reported population of people detained by ICE
 
 |Variable          |Type      |Description                                     |
@@ -147,7 +146,7 @@ The reported population of people detained by ICE
 |population_current|`numeric `|Where available, the reported population in ICE detention, nationally|
 |ice_date_as_of_pop|`datetime`|Where available, the "AS OF" timestamp reported alongside national population detained reports|
 
-### `./national_tests_hourly.csv`
+### `./national_tests_hourly.parquet`
 Reported COVID-19 tests administered, nationally
 
 |Variable           |Type      |Description                                    |
