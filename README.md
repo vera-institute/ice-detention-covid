@@ -3,6 +3,8 @@
 # ICE-Reported COVID-19 Detention Dataset
 Data on confirmed COVID-19 cases and tests as reported by Immigration and Customs Enforcement (ICE) from March 24, 2020 through present. This data originates from hourly downloads of [https://ice.gov/coronavirus](https://ice.gov/coronavirus). Vera updates the data in this repository on a daily basis.
 
+Vera's dashboard visualizing this data is available here: [https://www.vera.org/tracking-covid-19-in-immigration-detention](https://www.vera.org/tracking-covid-19-in-immigration-detention)
+
 # About the Data
 On March 24, 2020, ICE launched a [webpage](https://ice.gov/coronavirus) that
 compiles information about COVID-19 in detention facilities, including the reported numbers of confirmed COVID-19 cases and tests for people detained by ICE. Researchers at the Vera Institute of Justice immediately began routinely archiving the
@@ -31,14 +33,15 @@ case count *decreased* to 289 (`page_id`: `3a805c09ad6c87fa5507ded71b3eaa0f`).
 
 ### ICE Webpage Versions
 While the content of the ICE webpage changes roughly once per weekday, the page layout
-has undergone 3 major revisions affecting the data available and how it is parsed, outlined below:
+has undergone four major revisions affecting the data available and how it is parsed, outlined below:
 
 |Version |First Appearance   |Description                                                                                                                |Example|
 |:-------|:------------------|:--------------------------------------------------------------------------------------------------------------------------|:-------------------------------------|
 |V1      |2020-03-24 22:47:00|Original page layout. ICE included all information in a single "tab," reporting the national and facility-level number of confirmed cases. Test and population information not yet included.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V1.html)|
 |V2      |2020-04-22 17:01:00|ICE began reporting the number of tests administered nationally within its webpage, reported in text as: "As of %m %d, ICE has administered {N} tests." Additionally, ICE partitions case data into a separate tab, "Confirmed Cases"                       |[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V2.html)|
 |V3      |2020-04-28 22:01:00|ICE began reporting test information in its own container and began reporting the currently detained population in text.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V3.html)|
-|V4      |2020-06-01 21:01:00|Current page layout. ICE created a separate tab, "ICE Detainee Statistics," for all COVID-19 summary statistics for people in detention.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V4.html)|
+|V4      |2020-06-01 21:01:00|ICE created a separate tab, "ICE Detainee Statistics," for all COVID-19 summary statistics for people in detention.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V4.html)|
+|V5      |2020-06-01 21:01:00|Current page layout. ICE removed an existing tab, "Employee Confirmed Cases," which ICE reportedly last updated on June 18, 2020. |[Link](https://vera-cij-public.s3-us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE+Guidance+on+COVID-19+V5.html)|
 
 ### ICE Webpage Timestamps
 Vera cautions users from relying solely on the
@@ -72,6 +75,18 @@ Vera uses the following sources to standardize facility strings:
 
 1. **Other** ("Other"): If no match is found within either of these two sources, or where a facility is reported as "local hospital" or other medical care facility, Vera manually assigns an identifier and location data.
 
+### Cumulative Detained Population
+ICE's COVID-19 webpage reports only on the number of *currently* detained people nationally. The agency does not report on the number of people detained *cumulatively* since the start of the pandemic, making it difficult to understand the relationship between the total number of tests administered, positive tests, and detained people at risk.
+
+To fill this gap, Vera calculates the cumulative detained population by routinely archiving ICE's [detention statistics reports](https://www.ice.gov/detention-management#tab2), which are updated periodically and reported elsewhere on the ICE website. To compute the cumulative number of people detained between the start date and each available date thereafter, Vera uses the reported number of people currently detained as of March 14, 2020 and incrementally adds the number of people initially booked in to custody ("initial book-ins") between March 14, 2020 and each available date of subsequent archived reports.
+
+Vera uses March 14, 2020 as the start date for the cumulative detained population, as it is the closest available report "as of" date relative to the date ICE confirmed the first COVID-19 case in detention (March 24, 2020), accounting for a seven-day-lag between exposure to COVID-19 and the onset of symptoms. (See the [technical appendix](https://storage.googleapis.com/vera-web-assets/inline-downloads/Hidden-Curve-Technical-Appendix_200629_171849.pdf) to Vera's report ["The Hidden Curve"](https://www.vera.org/the-hidden-curve-covid-19-in-ice-detention) for further explanation of this assumption.)
+
+The archived ICE detention statistics reports aggregate the number of initial book-ins by month. Where the archived report's "as of" date occurs before the last date of a given month, the initial book-ins capture month-to-date. For initial book-ins between March 14-30, 2020, Vera subtracts the total for March 2020 reported as of March 14, 2020 (i.e., initial book-ins between March 1-14, 2020) from the final reported value for March 2020 (i.e. initial book-ins between March 1-30, 2020).
+
+For September 2020, Vera is only able to include the number of initial book-ins between September 1-12, 2020. ICE has not yet published a final detention statistics report that covers the entire Fiscal Year (FY) 2020 (October 1, 2019-September 30, 2020); the next report ICE published covered statistics for FY2021 to date as of November 7, 2020 (i.e, October 1-November 7, 2020). Thus, the calculated cumulative detained population after September 12, 2020 is an undercount of the true number, as it is missing values for initial book-ins between September 12-30, 2020.
+
+
 # Data Dictionaries
 
 We include in this repository data on the four domains above in two versions:
@@ -96,6 +111,8 @@ ice-detention-covid/
     |   |-- national_cases_daily.csv
     |   |-- national_population_daily.csv
     |   `-- national_tests_daily.csv
+    |-- data_supplemental/
+    |   `-- cumulative_detained.csv
     `-- metadata/
         |-- facility_lookup.csv
         `-- parsing_metadata.csv
@@ -205,6 +222,18 @@ These tables are subsets of the corresponding `data_hourly/` tables. Rather than
 |ice_date_as_of_test|`datetime`|The latest value assumed by the `ice_date_as_of_test` field for a given `page_download_day`|
 |page_id            |`string`  |The `page_id` for this record                    |
 
+
+## `data_supplemental`
+### `./cumulative_detained.csv`
+Calculated cumulative detained population over time
+
+|Variable                      |Type     |Description                          |
+|:-----------------------------|:--------|:------------------------------------|
+|as_of_date                    |`date`   |The date on which the detention statistics resource was updated on ICE's website|
+|cumulative_detained_cbp_arrest|`numeric`|The number of people cumulatively detained from CBP arrests, up to `date`|
+|cumulative_detained_ice_arrest|`numeric`|The number of people cumulatively detained from ICE arrests, up to `date`|
+|cumulative_detained_total     |`numeric`|The number of people cumulatively detained from either agency, up to `date`|
+
 ## `metadata/`
 
 ### `./facility_lookup.csv`
@@ -233,7 +262,6 @@ Page timestamps and other associated metadata
 |ice_date_as_of_test        |`datetime`|Where available, the "AS OF" timestamp reported alongside test administration reports|
 |ice_date_as_of_pop         |`datetime`|Where available, the "AS OF" timestamp reported alongside national population detained reports|
 |ice_page_version           |`string`  |The page version; see [above](#ice-webpage-versions) for details|
-
 # License
 By downloading the data, you hereby agree to all the terms specified in this
 [license](./License.md).
