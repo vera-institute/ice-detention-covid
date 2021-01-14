@@ -35,7 +35,7 @@ case count *decreased* to 289 (`page_id`: `3a805c09ad6c87fa5507ded71b3eaa0f`).
 
 ### ICE Webpage Versions
 While the content of the ICE webpage changes roughly once per weekday, the page layout
-has undergone four major revisions affecting the data available and how it is parsed, outlined below:
+has undergone five major revisions affecting the data available and how it is parsed, outlined below:
 
 |Version |First Appearance   |Description                                                                                                                |Example|
 |:-------|:------------------|:--------------------------------------------------------------------------------------------------------------------------|:-------------------------------------|
@@ -43,7 +43,8 @@ has undergone four major revisions affecting the data available and how it is pa
 |V2      |2020-04-22 17:01:00|ICE began reporting the number of tests administered nationally within its webpage, reported in text as: "As of %m %d, ICE has administered {N} tests." Additionally, ICE partitions case data into a separate tab, "Confirmed Cases"                       |[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V2.html)|
 |V3      |2020-04-28 22:01:00|ICE began reporting test information in its own container and began reporting the currently detained population in text.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V3.html)|
 |V4      |2020-06-01 21:01:00|ICE created a separate tab, "ICE Detainee Statistics," for all COVID-19 summary statistics for people in detention.|[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V4.html)|
-|V5      |2020-11-23 18:02:00|Current page layout. ICE removed an existing tab, "Employee Confirmed Cases," which ICE reportedly last updated on June 18, 2020. |[Link](https://vera-cij-public.s3-us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE+Guidance+on+COVID-19+V5.html)|
+|V5      |2020-11-23 18:02:00|ICE removed an existing tab, "Employee Confirmed Cases," which ICE reportedly last updated on June 18, 2020. |[Link](https://vera-cij-public.s3-us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V5.html)|
+|V6      |2021-01-13 00:02:00|Current page layout. Page styling updated to reflect the [USWDS standard](https://designsystem.digital.gov/). Tab layout was replaced by anchored navigation, but COVID-19 statistics among people detained was relatively unchanged. |[Link](https://vera-cij-public.s3.us-gov-east-1.amazonaws.com/ice_covid/ice_detention_covid/ICE%20Guidance%20on%20COVID-19%20V6.html)
 
 ### ICE Webpage Timestamps
 Vera cautions users from relying solely on the
