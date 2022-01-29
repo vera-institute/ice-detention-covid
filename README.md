@@ -178,6 +178,8 @@ Reported COVID-19 tests administered, nationally
 ## `data_daily/`
 These tables are subsets of the corresponding `data_hourly/` tables. Rather than including records for all archived pages for a given day, these tables retain only the records associated with the *latest* `page_downloaded` timestamp for a given day (corresponding to 0:00 to 23:59 Eastern Time).
 
+Note one exception where the `cases_current` value in `data_hourly/national_cases_daily.csv` does not reflect that of the latest `page_downloaded` timestamp for a given day. On the page archived 2022-01-27 20:03:00, ICE reported "3,1292" current cases as of 2022-01-26. ICE did not correct this typo until the following morning (on the page archived 2022-01-28 13:03:00), when it updated the figure as 3,129 current cases as of 2022-01-26. Since the extra "2" in this typo incorrectly increased the number of current cases by an order of magnitude, Vera attributed the corrected value (3,192) to 2022-01-27 when summarizing daily numbers. The original values reported by ICE are documented in table `data_hourly/national_cases_hourly.parquet`.
+
 ### `./facility_cases_daily.csv`
 
 |Variable                 |Type      |Description                               |
